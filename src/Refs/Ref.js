@@ -24,14 +24,19 @@ export default class RefExample1 extends React.Component{
     render(){
         return(
             <div>
-                <h2>value displayed: {this.state.value}</h2>
+                <h3 className="sub header">value displayed: {this.state.value}</h3>
             <form onSubmit={this.handleSubmit}>
 
                {/* using callback fucntion in ref */}
-                <input type="text" ref={e => this.textInput =e}/>
+               <div className="ui form">
+                   <div className="field">
+                   <input type="text" ref={e => this.textInput =e}/>
+                   </div>
+               </div>
 
                  {/* <input type='text' ref={this.textInput}/> */}
-                <button>Submit</button>
+                 <br/>
+                <button className="ui button">Submit</button>
             </form>
             </div>
         )

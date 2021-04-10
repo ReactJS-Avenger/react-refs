@@ -18,9 +18,14 @@ export default class RefExample3 extends React.Component{
     render(){
         return(
             <div>
-                <h3>Value is: {this.state.value}</h3>
+                <h3 className="sub header">value is: {this.state.value}</h3>
+                <div className="ui form">
+                <div className="field">
                 <input type="text" ref="textInput"/>
-                <button onClick={this.handleClick}>Click Here</button>
+                </div>
+                </div>
+                <br/>
+                <button className="ui button" onClick={this.handleClick}>Click Here</button>
             </div>
         )
     }

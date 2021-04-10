@@ -24,10 +24,11 @@ export default class RefForwarding extends React.Component{
     render(){
         return(
             <div>
-            <h3>The value is: {this.state.value}</h3>
-            <form onSubmit={this.handleSubmit}>
+            <h3 className="sub header">value is: {this.state.value}</h3>
+            <form className="ui form" onSubmit={this.handleSubmit}>
                 <Input ref={this.inputText}/>
-                <button>Submit</button>
+                <br/><br/>
+                <button className="ui button">Submit</button>
             </form>
             </div>
         )

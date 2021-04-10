@@ -34,13 +34,20 @@ export default class RefFormValidation extends React.Component{
     }
 
     render(){
+        if(this.state.error) 
         return(
             <div>
-                <p>{this.state.error}</p>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" ref={this.username}/><br/>
-                    <input type="text" ref={this.password}/><br/>
-                    <button>Submit</button>
+                <p className={"ui"+ (this.state.error.length>0 ? " error " : null)  +"message"}>{this.state.error}</p>
+                <form className="ui form" onSubmit={this.handleSubmit}>
+                    <div className="field">
+                        <label>Username</label>
+                    <input type="text" ref={this.username} placeholder="UserName"/><br/>
+                    </div>
+                    <div className="field">
+                        <label>Password</label>
+                    <input type="text" ref={this.password} placeholder="password"/><br/>
+                    </div>
+                    <button className="ui button">Submit</button>
                 </form>
             </div>
         )
